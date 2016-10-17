@@ -161,6 +161,18 @@ bool WiFiClient::getNoDelay() {
     return _client->getNoDelay();
 }
 
+void WiFiClient::setNonBlocking(bool nonblocking) {
+    if (!_client)
+        return;
+    _client->setNonBlocking(nonblocking);
+}
+
+bool WiFiClient::getNonBlocking() {
+    if (!_client)
+        return false;
+    return _client->getNonBlocking();
+}
+
 size_t WiFiClient::write(uint8_t b)
 {
     return write(&b, 1);

@@ -73,6 +73,8 @@ public:
   uint16_t  localPort();
   bool getNoDelay();
   void setNoDelay(bool nodelay);
+  bool getNonBlocking();
+  void setNonBlocking(bool nonblocking);
   static void setLocalPortStart(uint16_t port) { _localPort = port; }
 
   friend class WiFiServer;
